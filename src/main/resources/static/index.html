@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Exemplo PasswordMeter</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header clearfix">
+			<h3 class="text-muted">Exemplo PasswordMeter</h3>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3"></div>
+
+			<div class="well col-md-6">
+				<p>Avaliador de segurança de senha</p>
+				<input id="senha" type="password" class="form-control"
+					placeholder="Inserir a senha" autofocus="autofocus"> <span
+					id="pontuacao" class="label label-default">0%</span>&nbsp; <span
+					id="complexidade" class="label label-danger">Muito curta</span>
+			</div>
+
+			<div class="col-md-3"></div>
+
+		</div>
+		<!-- end row -->
+
+
+
+		<div class="jumbotron">
+
+			<div class="row">
+				<div class="col-md-2"></div>
+
+				<div class="col-md-8">
+
+					<table class="table table-condensed">
+						<thead>
+							<th>Adições</th>
+							<th>Taxa</th>
+							<th>Contagem</th>
+							<th>Bônus</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Número de caracteres</td>
+								<td>+(n*4)</td>
+								<td id="quantNumeroCaracter">0</td>
+								<td id="valorNumeroCaracter">0</td>
+							</tr>
+							<tr>
+								<td>Letras maiúsculas</td>
+								<td>+((len-n)*2)</td>
+								<td id="quantMaiuscula">0</td>
+								<td id="valorMaiuscula">0</td>
+							</tr>
+							<tr>
+								<td>Letras minúsculas</td>
+								<td>+((len-n)*2)</td>
+								<td id="quantMinuscula">0</td>
+								<td id="valorMinuscula">0</td>
+							</tr>
+							<tr>
+								<td>Números</td>
+								<td>+(n*4)</td>
+								<td id="quantNumero">0</td>
+								<td id="valorNumero">0</td>
+							</tr>
+							<tr>
+								<td>Símbolos</td>
+								<td>+(n*6)</td>
+								<td id="quantSimbolo">0</td>
+								<td id="valorSimbolo">0</td>
+							</tr>
+							<tr>
+								<td>Números ou símbolos</td>
+								<td>+(n*2)</td>
+								<td id="numeroSimbolo">0</td>
+								<td id="valorNumeroSimbolo">0</td>
+							</tr>
+							<tr>
+								<td>Requisitos</td>
+								<td>+(n*2)</td>
+								<td id="quantRequisito">0</td>
+								<td id="valorRequisito">0</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-condensed">
+						<thead>
+							<th>Deduções</th>
+							<th width="20%">Taxa</th>
+							<th>Contagem</th>
+							<th>Bônus</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Somente letras</td>
+								<td>-n</td>
+								<td id="quantLetra">0</td>
+								<td id="valorLetra">0</td>
+							</tr>
+							<tr>
+								<td>Apenas números</td>
+								<td>-n</td>
+								<td id="quantApenasNumero">0</td>
+								<td id="valorApenasNumero">0</td>
+							</tr>
+							<tr>
+								<td>Caracteres repetidos</td>
+								<td>-</td>
+								<td id="quantCaractereRepetido">0</td>
+								<td id="valorCaractereRepetido">0</td>
+							</tr>
+							<tr>
+								<td>Letras maiúsculas consecutivas</td>
+								<td>-(n*2)</td>
+								<td id="quantMaiusculaConsecutiva">0</td>
+								<td id="valorMaiusculaConsecutiva">0</td>
+							</tr>
+							<tr>
+								<td>Letras minúsculas consecutivas</td>
+								<td>-(n*2)</td>
+								<td id="quantMinusculaConsecutiva">0</td>
+								<td id="valorMinusculaConsecutiva">0</td>
+							</tr>
+							<tr>
+								<td>Números consecutivos</td>
+								<td>-(n*2)</td>
+								<td id="quantNumeroConsecutivo">0</td>
+								<td id="valorNumeroConsecutivo">0</td>
+							</tr>
+							<tr>
+								<td>Letras sequenciais (3+)</td>
+								<td>-(n*3)</td>
+								<td id="quantLetraSequencial">0</td>
+								<td id="valorLetraSequencial">0</td>
+							</tr>
+							<tr>
+								<td>Números sequenciais (3+)</td>
+								<td>-(n*3)</td>
+								<td id="quantNumeroSequencial">0</td>
+								<td id="valorNumeroSequencial">0</td>
+							</tr>
+							<tr>
+								<td>Símbolos Sequenciais (3+)</td>
+								<td>-(n*3)</td>
+								<td id="quantSimboloSequencial">0</td>
+								<td id="valorSimboloSequencial">0</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="col-md-2"></div>
+
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<p>&copy; 2016 Cleiton Ferreira</p>
+		</footer>
+
+	</div>
+	<!-- /container -->
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/passwordmeter.js"></script>
+</body>
+</html>
