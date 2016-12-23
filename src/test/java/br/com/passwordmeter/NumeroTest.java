@@ -12,8 +12,8 @@ import br.com.passwordmeter.model.Pontuacao;
 import br.com.passwordmeter.service.PasswordService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes={PasswordService.class, Pontuacao.class})
-public class LetraMaiusculaTest {
+@ContextConfiguration(classes = { PasswordService.class, Pontuacao.class })
+public class NumeroTest {
 
 	@Autowired
 	private PasswordService passwordService;
@@ -21,19 +21,19 @@ public class LetraMaiusculaTest {
 	public static String senha = "!@s3curity";
 
 	@Test
-	public void verificaLetraMaiuscula() {
+	public void verificaQuantNumero() {
 
 		Pontuacao p = passwordService.verifica(senha);
 
-		assertEquals(0, p.getQuantMaiuscula());
+		assertEquals(1, p.getQuantNumero());
 	}
 
 	@Test
-	public void verificaBonusLetraMaiuscula() {
+	public void verificaBonusNumero() {
 
 		Pontuacao p = passwordService.verifica(senha);
 
-		assertEquals(0, p.getValorMaiuscula());
+		assertEquals(4, p.getValorNumero());
 	}
-	
+
 }

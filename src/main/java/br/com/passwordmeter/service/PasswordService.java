@@ -142,8 +142,6 @@ public class PasswordService {
 	}
 	
 	private Pontuacao atualizarPontuacao() {
-
-		//Pontuacao pontuacao = new Pontuacao();
 		
 		pontuacao.setPontuacao(this.getPontuacao());
 		pontuacao.setComplexidade(this.getComplexidade());
@@ -169,7 +167,7 @@ public class PasswordService {
 		pontuacao.setValorLetra(this.getBonusSomenteLetras());
 		pontuacao.setQuantApenasNumero(this.getSomenteNumeros());
 		pontuacao.setValorApenasNumero(this.getBonusSomenteNumeros());
-		pontuacao.setQuantCaractereRepetido(this.getCaracterRepetido());
+		pontuacao.setQuantCaracterRepetido(this.getCaracterRepetido());
 		pontuacao.setQuantMaiusculaConsecutiva(this.getLetraMaiusculaConsecutiva());
 		pontuacao.setValorMaiusculaConsecutiva(this.getBonusLetrasMaiusculasConsecutivas());
 		pontuacao.setQuantMinusculaConsecutiva(this.getLetraMinusculaConsecutiva());

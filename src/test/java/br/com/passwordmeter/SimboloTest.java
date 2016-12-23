@@ -13,7 +13,7 @@ import br.com.passwordmeter.service.PasswordService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes={PasswordService.class, Pontuacao.class})
-public class LetraMaiusculaTest {
+public class SimboloTest {
 
 	@Autowired
 	private PasswordService passwordService;
@@ -21,19 +21,19 @@ public class LetraMaiusculaTest {
 	public static String senha = "!@s3curity";
 
 	@Test
-	public void verificaLetraMaiuscula() {
+	public void verificaQuantSimbolos() {
 
 		Pontuacao p = passwordService.verifica(senha);
 
-		assertEquals(0, p.getQuantMaiuscula());
+		assertEquals(2, p.getQuantSimbolo());
 	}
 
 	@Test
-	public void verificaBonusLetraMaiuscula() {
+	public void verificaBonusSimbolos() {
 
 		Pontuacao p = passwordService.verifica(senha);
 
-		assertEquals(0, p.getValorMaiuscula());
+		assertEquals(12, p.getValorSimbolo());
 	}
 	
 }

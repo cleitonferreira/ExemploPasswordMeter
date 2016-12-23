@@ -2,22 +2,23 @@ package br.com.passwordmeter;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import br.com.passwordmeter.model.Pontuacao;
 import br.com.passwordmeter.service.PasswordService;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes={PasswordService.class, Pontuacao.class})
 public class ComplexidadeTest {
 
+	@Autowired
 	private PasswordService passwordService;
 
 	public static String senha = "!@s3curity";
-
-	@Before
-	public void setUp() {
-		this.passwordService = new PasswordService();
-	}
 
 	@Test
 	public void verificaComplexidade() {

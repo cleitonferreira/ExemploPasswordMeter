@@ -28,7 +28,7 @@ document.getElementById("senha").onkeyup = function() {
 			setValue('quantApenasNumero', response.quantApenasNumero);
 			setValue('valorApenasNumero', response.valorApenasNumero);
 			
-			setValue('quantCaractereRepetido', response.quantCaractereRepetido);
+			setValue('quantCaractereRepetido', response.quantCaracterRepetido);
 			
 			setValue('quantMaiusculaConsecutiva', response.quantMaiusculaConsecutiva);
 			setValue('valorMaiusculaConsecutiva', response.valorMaiusculaConsecutiva);

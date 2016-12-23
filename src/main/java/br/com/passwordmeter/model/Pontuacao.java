@@ -33,8 +33,8 @@ public class Pontuacao implements Serializable{
 	private int valorLetra;
 	private int quantApenasNumero;
 	private int valorApenasNumero;
-	private int quantCaractereRepetido;
-	private int valorCaractereRepetido;
+	private int quantCaracterRepetido;
+	private int valorCaracterRepetido;
 	private int quantMaiusculaConsecutiva;
 	private int valorMaiusculaConsecutiva;
 	private int quantMinusculaConsecutiva;
@@ -169,17 +169,17 @@ public class Pontuacao implements Serializable{
 	public void setValorApenasNumero(int valorApenasNumero) {
 		this.valorApenasNumero = valorApenasNumero;
 	}
-	public int getQuantCaractereRepetido() {
-		return quantCaractereRepetido;
+	public int getQuantCaracterRepetido() {
+		return quantCaracterRepetido;
 	}
-	public void setQuantCaractereRepetido(int quantCaractereRepetido) {
-		this.quantCaractereRepetido = quantCaractereRepetido;
+	public void setQuantCaracterRepetido(int quantCaracterRepetido) {
+		this.quantCaracterRepetido = quantCaracterRepetido;
 	}
-	public int getValorCaractereRepetido() {
-		return valorCaractereRepetido;
+	public int getValorCaracterRepetido() {
+		return valorCaracterRepetido;
 	}
-	public void setValorCaractereRepetido(int valorCaractereRepetido) {
-		this.valorCaractereRepetido = valorCaractereRepetido;
+	public void setValorCaracterRepetido(int valorCaracterRepetido) {
+		this.valorCaracterRepetido = valorCaracterRepetido;
 	}
 	public int getQuantMaiusculaConsecutiva() {
 		return quantMaiusculaConsecutiva;
