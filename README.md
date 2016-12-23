@@ -11,6 +11,13 @@ FRONT-END -  Bootstrap
 
 Depois de executar ao projeto rest-cloud, acessar este endereço: http://localhost:8080/
 ```
+Referências:
+
+Site The Password Meter
+
+```sh
+http://www.passwordmeter.com/
+```
 
 IDE's
 ================
